@@ -1,34 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Next.js를 활용한 깃허브 클론
 
-## Getting Started
+-> 클론 코딩으로 시작하는 Next.js 1장 프로젝트
 
-First, run the development server:
+![0](0.png)
 
-```bash
-npm run dev
-# or
-yarn dev
+### 실행
+
+```
+next build
+next start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 새로 습득한 내용
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Next.js 프로젝트 구조
+- pages 폴더에 추가한 페이지는 해당 파일명으로 라우팅됨.
+- _app
+  - _app 은 모든 페이지에 적용되는 컴포넌트로, 스타일 및 레이아웃을 전역으로 적용할 수 있음.
+- _document
+  - _document 는 기본 html 템플릿을 담당함. (public 폴더의 index.html을 대체함.)
+  - _document 는 클래스 컴포넌트를 활용하며, `next/document` 의 `Document` 를 상속받음.
+  - _document 는 body 안에 `<Main />` 과 `<NextScript />` 를 포함해야 함.
+- 404
+  - 페이지를 찾을 수 없을 시 404.js 페이지를 출력함.
+- 500
+  - 서버 에러 시 _error.js 페이지를 출력함.
